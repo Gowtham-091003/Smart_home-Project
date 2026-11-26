@@ -14,7 +14,7 @@ import axios from "axios";
 import { io } from "socket.io-client";
 import "./app.css";
 
-const API = "http://localhost:5000";
+const API = "https://smart-home-project-9sik.onrender.com";
 
 function App() {
   const [sensorData, setSensorData] = useState(null);

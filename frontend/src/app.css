@@ -1,0 +1,240 @@
+
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f9;
+  color: #1f2937;
+}
+
+.dashboard {
+  min-height: 100vh;
+}
+
+/* Header */
+.dashboard-header {
+  background-color: #ffffff;
+  padding: 24px 6%;
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.dashboard-header h1 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 7px;
+}
+
+.dashboard-header p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.connection-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  background-color: #16a34a;
+  border-radius: 50%;
+}
+
+/* Main Content */
+.dashboard-content {
+  width: 88%;
+  max-width: 1250px;
+  margin: 35px auto;
+}
+
+.dashboard-section {
+  margin-bottom: 35px;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+.section-heading p {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Sensor Cards */
+.sensor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.sensor-card {
+  background-color: #ffffff;
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.card-label {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.sensor-card h3 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.sensor-card span {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.motion-value {
+  font-size: 24px !important;
+}
+
+/* Device Cards */
+.device-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.device-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 22px;
+}
+
+.device-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.device-type {
+  font-size: 12px;
+  color: #9ca3af;
+  text-transform: capitalize;
+}
+
+.device-status {
+  margin: 20px 0;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 13px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge.on {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.status-badge.off {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+/* Device Buttons */
+.device-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.turn-on {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.turn-on:hover {
+  background-color: #1d4ed8;
+}
+
+.turn-off {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.turn-off:hover {
+  background-color: #e5e7eb;
+}
+
+/* Temperature Chart */
+.chart-container {
+  background-color: #ffffff;
+  padding: 25px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+/* Footer */
+.dashboard-footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+  color: #9ca3af;
+  border-top: 1px solid #e5e7eb;
+  background-color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard-content {
+    width: 92%;
+    margin: 25px auto;
+  }
+
+  .sensor-grid,
+  .device-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-header h1 {
+    font-size: 21px;
+  }
+
+  .chart-container {
+    padding: 15px;
+  }
+}
